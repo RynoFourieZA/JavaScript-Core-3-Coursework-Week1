@@ -17,6 +17,7 @@ function populateStorage() {
     myLibrary.push(book1);
     myLibrary.push(book2);
     render();
+    console.log(render());
   }
 }
 
@@ -60,8 +61,6 @@ function render() {
   //insert updated row and cells
   let length = myLibrary.length;
   for (let i = 0; i < length; i++) {
-    // console.log("this is my length", length);
-    // console.log("this is my myLibrary", myLibrary[i].title);
     let row = table.insertRow(1);
     let cell1 = row.insertCell(0);
     let cell2 = row.insertCell(1);
@@ -94,7 +93,6 @@ function render() {
     let delButton = document.createElement("button");
     delButton.id = i + 5;
     cell5.appendChild(delButton);
-    console.log(delButton);
     delButton.className = "btn btn-warning";
     delButton.innerHTML = "Delete";
     delButton.addEventListener("click", function () {
